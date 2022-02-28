@@ -18,7 +18,7 @@ class Convert extends ChangeNotifier {
     // 変換処理本体
     var lines = value.split('\n');
     var result = "";
-    lines.forEach((String line) {
+    for (var line in lines) {
       // 1行分の処理
       // =がない場合はそのまま出力。=がある場合は=を,に置き換えて@Variant内のエスケープ文字を32ビット浮動小数点に変換して出力する
       var equalPos = line.indexOf('=');
@@ -29,21 +29,21 @@ class Convert extends ChangeNotifier {
         words.add(line.substring(0, equalPos));
         words.add(line.substring(equalPos + 1));
         result += words[0] + ',';
-        if (words[1].indexOf("@Variant") >= 0) {
+        if (words[1].contains("@Variant")) {
           // ()内のエスケープ文字を取り出して32ビット浮動小数点に変換し出力
           var start = words[1].indexOf('(') + 1;
           var end = words[1].indexOf(')');
           var view = escapeStringToDouble(words[1].substring(start, end));
           result +=
               view.toStringAsFixed(3).replaceAll(trailingZeroSuppress, '');
-        } else if (words[1].indexOf('[') >= 0) {
+        } else if (words[1].contains('[')) {
           result += '"' + words[1] + '"';
         } else {
           result += words[1];
         }
         result += '\n';
       }
-    });
+    }
     return result;
   }
 
