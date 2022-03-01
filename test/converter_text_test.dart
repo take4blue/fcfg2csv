@@ -60,13 +60,15 @@ nozzleSize=@Variant(\0\0\0\x87>\xcc\xcc\xcd)
 [General]
 extruderTemp0=@Variant(\0\0\0\x87\x43R\0\0)
 baseSpeed="@Variant(\0\0\0\x87\x42p\0\0)"
-fillLayerDensitys=[]"""), equals('''[Custom]
+fillLayerDensitys=[]
+layerPauses=[]"""), equals('''[Custom]
 machineId,9
 nozzleSize,0.4
 [General]
 extruderTemp0,210
 baseSpeed,60
 fillLayerDensitys,"[]"
+layerPauses,"[]"
 '''));
   });
 }

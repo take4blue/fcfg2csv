@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:typed_data';
 
 class Convert {
@@ -7,7 +8,7 @@ class Convert {
     RegExp trailingZeroSuppress = RegExp(r'([.]*0+)(?!.*\d)');
 
     // 変換処理本体
-    var lines = value.split('\n');
+    var lines = LineSplitter.split(value);
     var result = "";
     for (var line in lines) {
       // 1行分の処理
