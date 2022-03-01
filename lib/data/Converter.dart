@@ -1,15 +1,6 @@
 import 'dart:typed_data';
-import 'package:flutter/foundation.dart';
 
-class Convert extends ChangeNotifier {
-  String fcfgParameter = "";
-  String csvParameter = "";
-
-  void toCsvParamere() {
-    csvParameter = convert(fcfgParameter);
-    notifyListeners();
-  }
-
+class Convert {
   // FlashPrintのパラメータ形式をCSV形式に変換する
   static String convert(String value) {
     // 数値の後方0を取り除くもの
