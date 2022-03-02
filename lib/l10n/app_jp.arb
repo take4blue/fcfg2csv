@@ -1,0 +1,13 @@
+{
+    "@@locale": "ja",
+    "title": "fdfgからcsv形式に",
+    "convert": "変換",
+    "clear": "クリア",
+    "inTextHint": "CFCGパラメータを設定する",
+    "inTextHintWeb": "CFCGパラメータを設定する\nファイルをドロップしてもOK",
+    "outTextHint": "変換結果が表示される\nロングタップでコピー",
+    "copy" : "CSVパラメータをコピーしました",
+    "importFile" : "ファイルから入力",
+    "exportFile" : "ファイルへ出力",
+    "saveFileTitile" : "保存ファイル名を指定してください:"
+}

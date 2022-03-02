@@ -1,0 +1,43 @@
+{
+    "title": "fcfg to csv type",
+    "@title": {
+      "description": "Application Title"
+    },
+    "convert": "Convert",
+    "@title": {
+      "description" : "Floating convert button"
+    },
+    "clear": "Clear text.",
+    "@title": {
+      "description" : "Clear input text."
+    },
+    "inTextHint": "FCFG Parameter Text.",
+    "@title" : {
+      "description" : "FCFG Parameter text field hint text"
+    },
+    "inTextHintWeb": "FCFG Parameter Text.\nYou can drop the file.",
+    "@title" : {
+      "description" : "FCFG Parameter text field hint text for WEB"
+    },
+    "outTextHint": "Converted parameter.\nCopy with a long tap.",
+    "@title" : {
+      "description" : "Output parameter area hint text"
+    },
+    "copy" : "Copy CSV Parameter.",
+    "@title" : {
+      "description" : "CSV Parameter To Copy buffer."
+    },
+    "importFile" : "Import...",
+    "@title" : {
+      "description" : "Import CFCG File."
+    },
+    "exportFile" : "Export...",
+    "@title" : {
+      "description" : "Export CFCG File."
+    },
+    "saveFileTitile" : "Please select an output file:",
+    "@title" : {
+      "description" : "File Save Dialog title."
+    }
+
+}
