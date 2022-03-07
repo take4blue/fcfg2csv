@@ -116,16 +116,12 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Widget> action(AppLocalizations message) {
     List<Widget> act = [
       IconButton(
-        onPressed: () {
-          _convert();
-        },
+        onPressed: _convert,
         icon: const Icon(CupertinoIcons.square_arrow_right),
         tooltip: message.convert,
       ),
       IconButton(
-        onPressed: () {
-          _clearInputText();
-        },
+        onPressed: _clearInputText,
         icon: const Icon(CupertinoIcons.delete),
         tooltip: message.clear,
       ),
@@ -186,7 +182,7 @@ class _MyHomePageState extends State<MyHomePage> {
       Flexible(
         child: GestureDetector(
           key: const Key("longTapArea"),
-          onLongPress: () => _toClipboard(),
+          onLongPress: _toClipboard,
           child: TextField(
             key: const Key('output'),
             expands: true,
@@ -209,7 +205,7 @@ class _MyHomePageState extends State<MyHomePage> {
           operation: DragOperation.copy,
           cursor: CursorType.grab,
           onCreated: (DropzoneViewController ctrl) => controller = ctrl,
-          onDrop: (dynamic ev) => _readFileFromDrop(ev),
+          onDrop: _readFileFromDrop,
         ),
         col,
       ]));
